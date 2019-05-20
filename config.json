@@ -28,6 +28,8 @@
 			"xref": true
 		},
 		"StructureDefinition": {
+      "template-base" : "template/instance-template-sd.html",
+      "template-definitions" : "template/instance-template-definitions.html",
 			"shex": true,
 			"sch": true,
 			"json-schema": true,
