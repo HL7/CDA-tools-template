@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- a simple Ant script that runs a single javascript for loading the IG -->
+<project name="squares" default="main" basedir=".">
+  <target name="main">
+    <!-- first, run a js -->
+    <script language="javascript" src="${ig.scripts}/onload.js"/>
+    <!-- second, run an xslt. note the output of this task makes the other task output irrelevant -->
+    <xslt in="${ig.source}xml" out="${ig.dest}xml" style="${ig.scripts}/onload.xslt"/>
+  </target>
+</project>
