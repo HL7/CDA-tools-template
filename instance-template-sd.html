@@ -10,9 +10,6 @@ title: profile
 {% include breadcrumbs.html %}
 
   <!-- ============CONTENT CONTENT=============== -->
-<div id="background">
-  <p id="bg-text">{% include {{[id]}}-watermark.md %}</p>
-</div>
 	
 <ul class="nav nav-tabs">
 	<li class="active"><a href="#">Content</a></li>
@@ -27,10 +24,6 @@ title: profile
 
 <!-- introductiontext here-->
 <a name="introduction"> </a>
-
-
-{% capture my-include %}{% include {{[id]}}-intro.md %}{% endcapture %}{{ my-include | markdownify }}
-
 
 <!-- example here -->
 <a name="example"> </a>
@@ -70,9 +63,8 @@ Formal Views of Profile Content
   <div id="tbl-summ">
    <div id="tbl-diff-inner">
      <a name="summary"> </a>
-<!--{% include {{[type]}}-{{[id]}}-summary.xhtml %}-->
+{% include {{[type]}}-{{[id]}}-summary.xhtml %}
 
-{% capture my-include %}{% include {{[id]}}-summary.md %}{% endcapture %}{{ my-include | markdownify }}
    </div>
   </div>
  </div>
@@ -115,8 +107,7 @@ Formal Views of Profile Content
   <div id="tbl-summ">
    <div id="tbl-diff-inner">
      <a name="summary"> </a>
-<!--   {% include {{[type]}}-{{[id]}}-summary.xhtml %}  -->
-{% capture my-include %}{% include {{[id]}}-summary.md %}{% endcapture %}{{ my-include | markdownify }}
+   {% include {{[type]}}-{{[id]}}-summary.xhtml %}  
    </div>
   </div>
 
@@ -163,8 +154,6 @@ Formal Views of Profile Content
 
 
 <p><b>Summary of Search Criteria for {{[type]}}-{{[id]}}</b></p>
-
-{% capture my-include %}{% include {{[id]}}-search.md %}{% endcapture %}{{ my-include | markdownify }}
 
 
 <!-- remove term and invarients sections
