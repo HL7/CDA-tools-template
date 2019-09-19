@@ -2,6 +2,8 @@
 # jekyll header
 ---
 {% include header.html %}
+{% include container-start.html %}
+{% include breadcrumbs.html %}
 
 <h2>{{[title]}}</h2>
 
@@ -11,4 +13,5 @@ Formats: <a href="{{[type]}}-{{[id]}}.xml.html">XML</a>, <a href="{{[type]}}-{{[
 
 {% include {{[type]}}-{{[name]}}.xhtml %}
 
+{% include container-end.html %}
 {% include footer.html %}
